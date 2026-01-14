@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devang Mestry | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="cursor-follower"></div>
+    <nav class="glass-nav">
+        <div class="logo"><a href="index.html">Portfolio.</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <span class="greeting">Hello, I'm</span>
+                <h1 class="glitch-text" data-text="Devang Mestry">Devang Mestry</h1>
+                <p class="subtitle">Technology Educator & Data Science Enthusiast</p>
+                <div class="cta-buttons">
+                    <a href="projects.html" class="btn primary">View Work</a>
+                    <a href="contact.html" class="btn secondary">Contact Me</a>
+                    <a href="/static/pdfs/Resume.pdf" target="_blank" class="btn secondary"
+                        style="border-color: var(--primary-color); color: var(--primary-color);">Resume <i
+                            class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <!-- Hero Background Visual Removed -->
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text glass-card">
+                        <p>I’m Devang Mestry, an Artificial Intelligence and Data Science graduate based in Mumbai,
+                            driven by curiosity, problem-solving, and a strong belief in data-driven decision making. My
+                            journey into data science was shaped as much by the football field as by the classroom -
+                            sports taught me discipline, strategy, and the power of analysis, lessons that naturally
+                            translated into how I approach technology and data today.</p>
+
+                        <p style="margin-top: 1rem;">Academically trained with a strong foundation in AI, machine
+                            learning, data analytics, and optimization, I enjoy building practical solutions that blend
+                            intelligence with usability. From developing AI-powered applications like Dietify, a
+                            cross-platform diet consultation system integrating LLMs and real-world APIs, to working on
+                            deep learning models for industrial crack detection, my work focuses on solving real
+                            problems with measurable impact. My experiences span analytics, full-stack development, IoT,
+                            and automation, reinforced through multiple internships and research-driven projects.</p>
+
+                        <p style="margin-top: 1rem;">Beyond technical work, I’ve taken on leadership roles - serving as
+                            CEO of the Society for Data Science, managing large student teams, organizing national-level
+                            hackathons, and currently working as a Technology Educator and District Coordinator, where I
+                            simplify complex technologies like AI, IoT, and robotics for wider adoption. Whether I’m
+                            analyzing datasets, leading teams, teaching technology, or pushing my limits through sports
+                            and trekking, I’m motivated by continuous learning and creating meaningful, real-world
+                            impact through technology.</p>
+                    </div>
+
+                    <!-- Profile Image -->
+                    <div class="about-image">
+                        <div class="image-wrapper glass-card" style="padding: 1rem;">
+                            <img src="/static/images/Devang Pic.jpg" alt="Devang Mestry"
+                                style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; filter: grayscale(20%); transition: 0.5s ease;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Audio Bio (Moved Below) -->
+                <div class="audio-bio-container" style="margin-top: 2rem;">
+                    <div class="audio-player glass-card"
+                        style="padding: 1.5rem; display: flex; align-items: center; gap: 1.5rem;">
+                        <button id="playPauseBtn" class="btn primary"
+                            style="width: 50px; height: 50px; border-radius: 50%; padding: 0; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="audio-info" style="flex: 1;">
+                            <span
+                                style="display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--primary-color);">Journey
+                                Elaboration <i class="fas fa-volume-up"></i></span>
+                            <div class="progress-container"
+                                style="width: 100%; height: 6px; background: rgba(189, 98, 37, 0.2); border-radius: 3px; overflow: hidden; cursor: pointer;">
+                                <div id="progressBar"
+                                    style="height: 100%; background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); width: 0%; transition: width 0.1s;">
+                                </div>
+                            </div>
+                            <div class="audio-controls-row"
+                                style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+                                <span id="timeDisplay"
+                                    style="font-size: 0.8rem; color: var(--secondary-color); display: block;">0:00
+                                    / 0:00</span>
+                                <button id="speedBtn" class="speed-btn"
+                                    style="background: transparent; border: 1px solid var(--glass-border); color: var(--primary-color); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; cursor: pointer; transition: 0.3s;">1x</button>
+                            </div>
+                        </div>
+                        <audio id="bioAudio" src="/static/audio/AI_Mastery_Requires_Himalayan_Endurance.m4a"
+                            preload="metadata"></audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
