@@ -1545,3 +1545,182 @@ footer {
         font-size: 2.2rem;
     }
 }
+
+
+.hamburger-menu {
+    display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    .glass-nav {
+        padding: 1rem 5%;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger-menu i {
+        font-size: 1.8rem;
+        color: var(--text-color);
+    }
+
+    .nav-links {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background: rgba(12, 21, 27, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        backdrop-filter: blur(15px);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 8rem 5% 4rem;
+        text-align: center;
+        align-items: center;
+        min-height: auto;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    /* General Layout */
+    .section {
+        padding: 4rem 5%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .audio-player {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .audio-controls-row {
+        justify-content: center;
+    }
+
+    /* Skills */
+    .skill-category {
+        padding: 2rem;
+    }
+
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        margin-bottom: 2rem;
+    }
+
+    /* Experience */
+    .experience-card {
+        padding: 2rem;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .experience-header .title-group {
+        max-width: 100%;
+    }
+
+    .experience-date {
+        position: relative;
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+
+    /* Modals */
+    .project-modal {
+        padding: 20px;
+    }
+
+    .close-project-modal {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Roadmap */
+    .tree-wrapper {
+        padding: 2rem 1rem;
+        min-height: auto;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .tree {
+        width: max-content;
+        min-width: 100%;
+        margin: 0 auto;
+    }
+
+    .node-card {
+        min-width: auto;
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+}
