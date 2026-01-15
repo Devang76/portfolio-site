@@ -1620,6 +1620,15 @@ footer {
     }
 
     .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        width: 100%;
         justify-content: center;
     }
 
